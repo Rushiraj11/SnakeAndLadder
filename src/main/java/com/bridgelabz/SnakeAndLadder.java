@@ -8,7 +8,10 @@ public class SnakeAndLadder {
     public static void main(String[] args) {
         // initialize player start position
         int position = 0;
+        int diceCount = 0; // Initialize dice count variable
         while (position < WINNING_POSITION) {
+
+            ++diceCount; // increment count
             // store value of Dice Roll
             int diceNumber = (int) (Math.floor(Math.random() * 10) % 6 + 1);
             // store the position value
@@ -35,6 +38,7 @@ public class SnakeAndLadder {
                 System.out.println(" No Play for the player"); // Will Remain to same position
             }
             System.out.println(" dice: " + diceNumber );
+            System.out.println("Dice Count :" + diceCount);
             System.out.println("position" + position);
         }
     }
